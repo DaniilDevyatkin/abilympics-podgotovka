@@ -1,0 +1,41 @@
+# frpc — клиентская часть UDP-туннеля (работает на домашней машине, без root).
+# Публикует домашний serve.py на порт 18100 VDS через KCP.
+#
+# Установка дома:
+#   mkdir -p ~/opt/frp ~/.config/frp ~/.local/state/frp
+#   install -m 755 frpc ~/opt/frp/frpc
+#   install -m 600 frpc.toml ~/.config/frp/frpc.toml   # с реальным токеном
+#   systemctl --user enable --now abilympics-frp
+serverAddr = "104.128.130.176"
+serverPort = 47002
+
+auth.method = "token"
+auth.token = "ВСТАВИТЬ_ТОКЕН"
+
+# KCP, а не QUIC: у quic-go в frp нет BBR, и на 16 % потерь он отдавал
+# 14–158 КБ/с, то есть хуже прежнего SSH-туннеля. KCP ретранслирует
+# агрессивно и на том же канале даёт 1,0–1,6 МБ/с на крупных файлах.
+transport.protocol = "kcp"
+transport.poolCount = 10
+transport.heartbeatInterval = 5
+transport.heartbeatTimeout = 15
+
+log.to = "/home/fun/.local/state/frp/frpc.log"
+log.level = "info"
+log.maxDays = 7
+
+[[proxies]]
+name = "abilympics-web"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8099
+remotePort = 18100
+# Адрес прослушивания задаётся на сервере: proxyBindAddr = "127.0.0.1" в frps.toml.
+
+# Если serve.py упал, frps снимает публикацию, и nginx уходит на резервный
+# SSH-туннель (порт 18099) вместо того, чтобы отдавать 502.
+[proxies.healthCheck]
+type = "tcp"
+timeoutSeconds = 3
+maxFailed = 3
+intervalSeconds = 10

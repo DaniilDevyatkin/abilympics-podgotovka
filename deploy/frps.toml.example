@@ -1,0 +1,34 @@
+# frps — серверная часть UDP-туннеля для сайта «Абилимпикс Башкортостан».
+# Транспорт KCP поверх UDP: убирает TCP-в-TCP, из-за которого SSH-туннель
+# душился потерями на маршруте ufanet -> dataix -> VDS.
+#
+# Установка на VDS:
+#   mkdir -p /opt/frp /etc/frp /var/log/frp
+#   install -m 755 frps /opt/frp/frps
+#   install -m 600 frps.toml /etc/frp/frps.toml     # с реальным токеном
+#   systemctl enable --now frps
+bindAddr = "0.0.0.0"
+bindPort = 47001
+# quicBindPort не задан: используется KCP (он на потерях лучше, чем QUIC в frp).
+kcpBindPort = 47002
+
+# Опубликованные порты (18100) слушаются только на loopback: снаружи сайт
+# доступен исключительно через nginx с TLS.
+proxyBindAddr = "127.0.0.1"
+
+auth.method = "token"
+# Реальный токен хранится только на машинах: /etc/frp/frps.toml на VDS и
+# ~/.config/frp/frpc.toml дома. В репозиторий его не кладём.
+auth.token = "ВСТАВИТЬ_ТОКЕН"
+
+# Разрешаем клиенту держать несколько параллельных соединений: несколько
+# потоков переживают потери заметно лучше одного.
+transport.maxPoolCount = 10
+
+# Быстро замечать пропажу клиента: иначе порт 18100 продолжает принимать
+# соединения без клиента, и nginx висит вместо переключения на резерв.
+transport.heartbeatTimeout = 15
+
+log.to = "/var/log/frp/frps.log"
+log.level = "info"
+log.maxDays = 7
