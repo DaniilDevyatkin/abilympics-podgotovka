@@ -1,0 +1,60 @@
+/* Пошаговое решение: типографика и цветовые роли (задание → задачи → действия → шаги). */
+.steps__body{--ink-body:#0B1A26;color:#0B1A26;max-width:min(1600px,100%);width:100%;margin-left:auto;margin-right:auto}
+@media (min-width:1181px){.steps__body{padding-left:0;padding-right:0}}
+/* ── пошаговое решение: читаемая типографика и цветовые роли ── */
+.s-intro{margin:8px 0 22px;font-size:17px;line-height:1.65;max-width:none;color:var(--ink-body)}
+/* вступительный абзац занимает всю ширину решения: на широком экране — в две колонки,
+   чтобы строка не превращалась в 110 знаков */
+@media (min-width:1100px){.s-intro{columns:2;column-gap:clamp(24px,3vw,56px)}}
+.s-fig{margin:26px 0}.s-fig img{max-width:940px;margin:0 auto}
+.s-fig img{width:100%;height:auto;display:block;border:2px solid var(--blue);background:#fff}
+.s-fig--step img{border-width:1.5px}
+.s-task{margin:44px 0 0;padding-top:14px;border-top:3px solid var(--blue)}
+.s-task h3{margin:0 0 10px;font-size:24px;font-weight:700;line-height:1.2;letter-spacing:.01em;text-transform:uppercase;color:var(--blue)}
+.s-score{display:block;width:fit-content;margin:10px 0 0;font-size:13px;font-weight:600;letter-spacing:.02em;color:#fff;background:var(--blue);padding:5px 10px;text-transform:none}
+.s-goal{margin:0 0 12px;font-size:17px;line-height:1.65;max-width:62ch;color:var(--ink-body)}
+.s-task h4{margin:30px 0 10px;padding-left:12px;border-left:6px solid var(--blue);font-size:19px;font-weight:600;line-height:1.35;color:var(--blue)}
+.s-step{margin:0;padding:18px 20px;border:1px solid rgba(5,64,242,.22);background:#fff}
+.s-step__n{display:inline-block;margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--ink-body);padding:3px 9px}
+.s-row{display:grid;grid-template-columns:1fr;gap:3px;padding:9px 0;border-top:1px solid rgba(5,64,242,.14);align-items:start}
+.s-row:first-of-type{border-top:0}
+.s-label{font-size:12.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;line-height:1.4}
+.s-val{margin:0;font-size:16px;line-height:1.6;color:var(--ink-body)}
+.s-row--do .s-label{color:var(--blue)}
+.s-row--do .s-val{font-size:17px;font-weight:500;color:var(--ink-body)}
+.s-row--why .s-label{color:#5b6472}
+.s-row--check{background:rgba(0,112,0,.06);padding-left:10px;padding-right:10px;margin-left:-10px;margin-right:-10px}
+.s-row--check .s-label{color:var(--flag-green)}
+.s-row--fail{background:rgba(232,56,69,.07);padding-left:10px;padding-right:10px;margin-left:-10px;margin-right:-10px}
+.s-row--fail .s-label{color:#b3121f}
+.s-row--expert .s-label{color:var(--blue)}
+.s-row--expert .s-val{color:#31405a}
+.s-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.s-table th,.s-table td{border-bottom:1px solid var(--blue);padding:10px 12px;text-align:left;vertical-align:top}
+.s-table th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.s-table td{color:var(--ink-body)}
+.s-risks{margin:12px 0 0;padding-left:22px;font-size:16px;line-height:1.6;color:var(--ink-body)}
+.s-risks li{margin:8px 0}
+.steps__body h3:not(.s-task h3){color:var(--blue)}
+.steps__body>h3{margin:34px 0 10px;font-size:22px;text-transform:uppercase;letter-spacing:.01em}
+@media (max-width:719px){
+  .s-row{grid-template-columns:1fr;gap:2px}
+  .s-task h3{font-size:20px}
+  .s-task h4{font-size:17px}
+  .s-val,.s-intro{font-size:16px}
+}
+
+/* печать и мобильные: не мельчить */
+@media (max-width:719px){.steps__body{max-width:none}}
+@media (max-width:1100px){.s-fig{width:100%;margin-right:0}}
+/* на узких экранах схемы прокручиваются, но не уменьшаются в нечитаемое */
+@media (max-width:760px){
+  .s-fig{overflow-x:auto}
+  .s-fig img{min-width:560px}
+}
+
+/* сетка шагов: одна колонка на узком экране, две — на широком */
+.s-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:start;margin:10px 0 6px}
+@media (min-width:1100px){.s-grid{grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:18px 22px}}
+.s-step:has(.s-fig--step){grid-column:1/-1}
+.s-grid>*{min-width:0}

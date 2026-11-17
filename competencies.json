@@ -1,0 +1,1359 @@
+[
+ {
+  "letter": "3D",
+  "items": [
+   {
+    "name": "3D дизайн ювелирных изделий (CAD) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/3d-dizayn-yuvelirnyh-izdeliy-cad-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "А",
+  "items": [
+   {
+    "name": "Агент по туризму (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/turizm-r.html"
+   },
+   {
+    "name": "Агроботы (Агророботы) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/agroboty-agroroboty-r.html"
+   },
+   {
+    "name": "Агрономия (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/agronomiya.html"
+   },
+   {
+    "name": "Аддитивное производство (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/bystroe-prototipirovanie.html"
+   },
+   {
+    "name": "Администрирование Астра Линукс (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/administrirovanie-astra-linux-r.html"
+   },
+   {
+    "name": "Администрирование баз данных (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/administrirovanie-baz-dannyh.html"
+   },
+   {
+    "name": "Администрирование отеля (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/administrirovanie-otelya-1.html"
+   },
+   {
+    "name": "Аниматор (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/animator-r.html"
+   },
+   {
+    "name": "Архитектор будущего - нейросетевое искусство (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/arhitektor-buduschego-neyrosetevoe-iskusstvo-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "Б",
+  "items": [
+   {
+    "name": "Бариста (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/barista.html"
+   },
+   {
+    "name": "Библиотечно-информационная деятельность (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/bibliotechno-informatsionnaya-deyatelnost.html"
+   },
+   {
+    "name": "Бисероплетение (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/biseropletenie.html"
+   },
+   {
+    "name": "Блинопек (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/blinopek-r.html"
+   },
+   {
+    "name": "Блокчейн-технологии (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/blokcheyn-tehnologii-r.html"
+   },
+   {
+    "name": "Бровист (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/brovist-r.html"
+   },
+   {
+    "name": "Брошь из фоамирана (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/brosh-iz-floamirana-fv.html"
+   },
+   {
+    "name": "Брошюровка и переплетное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/broshyurovka-i-perepletnoe-delo-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "В",
+  "items": [
+   {
+    "name": "Валяние игрушки (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/valyanie-igrushki-fv.html"
+   },
+   {
+    "name": "Веб - разработка (программирование) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/veb-razrabotka.html"
+   },
+   {
+    "name": "Веб-дизайн (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/veb-dizayn.html"
+   },
+   {
+    "name": "Веломеханика (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/velomehanika-r.html"
+   },
+   {
+    "name": "Ветеринария (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/veterinariya-r.html"
+   },
+   {
+    "name": "Визаж (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vizazh.html"
+   },
+   {
+    "name": "Водитель такси (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/voditel-taxi-r.html"
+   },
+   {
+    "name": "Водные технологии (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vodnye-tehnologii-r.html"
+   },
+   {
+    "name": "Вожатый (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vozhatyy.html"
+   },
+   {
+    "name": "Войлочное искусство (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/voylochnoe-iskusstvo-r.html"
+   },
+   {
+    "name": "Выпечка осетинских пирогов (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vypechka-osetinskih-pirogov-o.html"
+   },
+   {
+    "name": "Выпечка хлебобулочных изделий (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vypechka-hlebobulochnyh-izdeliy.html"
+   },
+   {
+    "name": "Выпиливание изделий из фанеры (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vypilivanie-izdeliy-iz-fanery-fv.html"
+   },
+   {
+    "name": "Вышивка крестиком (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vyshivka-krestikom-fv.html"
+   },
+   {
+    "name": "Вязание из трикотажной пряжи (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vyazanie-iz-trikotazhnoy-pryazhi-fv.html"
+   },
+   {
+    "name": "Вязание крючком (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vyazanie-kryuchkom.html"
+   },
+   {
+    "name": "Вязание на станке (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vyazanie-na-stanke-fv.html"
+   },
+   {
+    "name": "Вязание спицами (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vyazanie-spitsami.html"
+   }
+  ]
+ },
+ {
+  "letter": "Г",
+  "items": [
+   {
+    "name": "Геодезия (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/geodeziya-r.html"
+   },
+   {
+    "name": "Гид-экскурсовод (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/gid-exkursovod-r.html"
+   },
+   {
+    "name": "Гончарное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/goncharnoe-delo.html"
+   },
+   {
+    "name": "Горничная (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/gornichnaya-r-1.html"
+   },
+   {
+    "name": "Графический дизайн (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/graficheskiy-dizayn-o.html"
+   }
+  ]
+ },
+ {
+  "letter": "Д",
+  "items": [
+   {
+    "name": "Декоративная мозаика (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dekorativnaya-mozaika-fv.html"
+   },
+   {
+    "name": "Декоративные работы (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dekorativnye-raboty-r.html"
+   },
+   {
+    "name": "Декорирование предметов интерьера (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dekorirovanie-predmetov-interera-fv.html"
+   },
+   {
+    "name": "Дизайн интерьера (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dizayn-interera-r.html"
+   },
+   {
+    "name": "Дизайн модной одежды и аксессуаров (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dizayn-modnoy-odezhdy-i-axessuarov-r.html"
+   },
+   {
+    "name": "Дизайн персонажей/Анимация (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dizayn-personazhey-animatsiya.html"
+   },
+   {
+    "name": "Дизайн плаката (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dizayn-plakata.html"
+   },
+   {
+    "name": "Дизайн-проектирование пространства (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dizayn-proektirovanie-prostranstva.html"
+   },
+   {
+    "name": "Дизайнер мягкой игрушки (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dizayner-myagkoy-igrushki-r.html"
+   },
+   {
+    "name": "Диспетчер автомобильного транспорта (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dispetcher-avtomobilnogo-transporta-r.html"
+   },
+   {
+    "name": "Документационное обеспечение управления и архивоведение (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dokumentatsionnoe-obespechenie-upravleniya-i-arhivovedeniya.html"
+   },
+   {
+    "name": "Дошкольная дефектология (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/doshkolnaya-defektologiya-r.html"
+   },
+   {
+    "name": "Дошкольное воспитание (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/doshkolnoe-vospitanie.html"
+   }
+  ]
+ },
+ {
+  "letter": "Ж",
+  "items": [
+   {
+    "name": "Жестовое искусство (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/zhestovoe-iskusstvo-r.html"
+   },
+   {
+    "name": "Жестянщик (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/zhestyanschik-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "З",
+  "items": [
+   {
+    "name": "Закройщик (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/zakroyschik-r.html"
+   },
+   {
+    "name": "Защитная полировка кузова автомобиля (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/zaschitnaya-polirovka-kuzova-avtomobilya-r.html"
+   },
+   {
+    "name": "Звукорежиссура (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/zvukorezhissura-1.html"
+   },
+   {
+    "name": "Зубной техник (Р, О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/zubnoy-tehnik.html"
+   }
+  ]
+ },
+ {
+  "letter": "И",
+  "items": [
+   {
+    "name": "Изготовитель пищевых полуфабрикатов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovitel-pischevyh-polufabrikatov-r.html"
+   },
+   {
+    "name": "Изготовление ароматических свечей (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-aromaticheskih-svechey-fv.html"
+   },
+   {
+    "name": "Изготовление вязаного изделия (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-vyazannogo-izdeliya-fv.html"
+   },
+   {
+    "name": "Изготовление глиняных изделий (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-glinyanyh-izdeliy-fv.html"
+   },
+   {
+    "name": "Изготовление деревянной игрушки (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-derevyannoy-igrushki-fv.html"
+   },
+   {
+    "name": "Изготовление изделий для СПА процедур (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-produktsii-dlya-spa-protsedur-r.html"
+   },
+   {
+    "name": "Изготовление изделий из лоскутной мозаики (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-izdeliy-iz-loskutnoy-mozaiki-fv.html"
+   },
+   {
+    "name": "Изготовление изделий из полимерных материалов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-izdeliy-iz-polimernyh-materialov-r.html"
+   },
+   {
+    "name": "Изготовление изделий из ротанга (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-izdeliy-iz-rotanga-r.html"
+   },
+   {
+    "name": "Изготовление изделий из фетра (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-izdeliy-iz-fetra-fv.html"
+   },
+   {
+    "name": "Изготовление картин из пайеток (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-kartin-iz-payetok-fv.html"
+   },
+   {
+    "name": "Изготовление мороженого (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-morozhennogo.html"
+   },
+   {
+    "name": "Изготовление мягкой игрушки (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-myagkoy-igrushki-fv.html"
+   },
+   {
+    "name": "Изготовление предметов интерьера из гипса (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-predmetov-interera-iz-gipsa-fv.html"
+   },
+   {
+    "name": "Изготовление художественных изделий из бересты (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovitel-izdeliy-iz-beresty.html"
+   },
+   {
+    "name": "Издатель (Компьютерные публикации в Publisher) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izdatel-fv.html"
+   },
+   {
+    "name": "Инженерия лесопользования и лесовосстановления (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/inzheneriya-lesopolzovaniya-i-lesovosstanovleniya.html"
+   },
+   {
+    "name": "Инженерный дизайн (CAD) САПР (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/inzhenernyy-dizayn-cad.html"
+   },
+   {
+    "name": "Инструктор по адаптивной физической культуре (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/adaptivnaya-fizicheskaya-kultura.html"
+   },
+   {
+    "name": "Инструктор по интеллектуальным видам спорта (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/instruktor-po-intellektualnym-vidam-sporta-r.html"
+   },
+   {
+    "name": "Инструктор по оказанию первой помощи (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/instruktor-po-okazaniyu-pervoy-meditsinskoy-pomoschi.html"
+   },
+   {
+    "name": "Интернет вещей (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/internet-veschey-r.html"
+   },
+   {
+    "name": "Интерьерное озеленение (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/interernoe-ozelenenie-r.html"
+   },
+   {
+    "name": "Информационная безопасность (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/informatsionnaya-bezopasnost-o.html"
+   },
+   {
+    "name": "Искусство пения (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/iskusstvo-peniya-fv.html"
+   },
+   {
+    "name": "Искусство танца (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/iskusstvo-tantsa-fv.html"
+   },
+   {
+    "name": "Исполнительское мастерство (вокал) (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ispolnitelskoe-masterstvo-vokal-1.html"
+   },
+   {
+    "name": "Исполнительское мастерство (инструменталист) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ispolnitelskoe-masterstvo-instrumentalist.html"
+   },
+   {
+    "name": "Исполнительское мастерство (театральное искусство) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ispolnitelskoe-masterstvo-teatralnoe-iskusstvo-r.html"
+   },
+   {
+    "name": "Исполнительское мастерство (хореография) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ispolnitelskoe-masterstvo-horeografiya-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "К",
+  "items": [
+   {
+    "name": "Карвинг (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/karving.html"
+   },
+   {
+    "name": "Картины шерстью (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kartiny-sherstyu-fv.html"
+   },
+   {
+    "name": "Картонажно-переплётное дело (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kartonazhno-perepletnoe-delo-fv.html"
+   },
+   {
+    "name": "Квиллинг (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kvilling-fv.html"
+   },
+   {
+    "name": "Кирпичная кладка (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kirpichnaya-kladka.html"
+   },
+   {
+    "name": "Клининг (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/klining.html"
+   },
+   {
+    "name": "Ковроделие (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kovrodelie-fv.html"
+   },
+   {
+    "name": "Ковроткачество крючком (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kovrotkachestvo-kryuchkom-r.html"
+   },
+   {
+    "name": "Кожевенное дело (изготовление кожаного изделия) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kozhevennoe-zhelo-fv.html"
+   },
+   {
+    "name": "Кожевенное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kozhevennoe-delo-r.html"
+   },
+   {
+    "name": "Кондитерское дело (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/konditerskoe-delo.html"
+   },
+   {
+    "name": "Консультант по банковским продуктам (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/bankovskoe-delo.html"
+   },
+   {
+    "name": "Контролер качества шерсти (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kontroler-kachestva-shersti-r.html"
+   },
+   {
+    "name": "Контролёр КИПиА (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kontroler-kipia-r.html"
+   },
+   {
+    "name": "Копирайтинг (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kopirayting-r.html"
+   },
+   {
+    "name": "Коррекционная педагогика (логопедия) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/korrektsionnaya-pedagogika-logopediya-r.html"
+   },
+   {
+    "name": "Коррекционная психология (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialnaya-psihologiya-r.html"
+   },
+   {
+    "name": "Косметик-эстетист (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/prikladnaya-estetika.html"
+   },
+   {
+    "name": "Косторезное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kostoreznoe-delo-r.html"
+   },
+   {
+    "name": "Кофе-Арт (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kofe-art-fv.html"
+   },
+   {
+    "name": "Кружевница (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kruzhevnitsa-r.html"
+   },
+   {
+    "name": "Кузовной ремонт (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kuzovnoy-remont-r.html"
+   },
+   {
+    "name": "Кулинарное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kulinarnoe-delo-r.html"
+   },
+   {
+    "name": "Кухонный рабочий (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/kuhonnyy-rabochiy-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "Л",
+  "items": [
+   {
+    "name": "Лабораторный химический анализ (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/laboratornyy-himicheskiy-analiz.html"
+   },
+   {
+    "name": "Лазерные технологии (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/lazernye-tehnologii.html"
+   },
+   {
+    "name": "Ландшафтный дизайн (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/landshaftnyy-dizayn.html"
+   },
+   {
+    "name": "Лепка бурятских бууз (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/lepka-buryatskih-buuz.html"
+   },
+   {
+    "name": "Лозоплетение (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/lozopletenie.html"
+   }
+  ]
+ },
+ {
+  "letter": "М",
+  "items": [
+   {
+    "name": "Макетирование из пластилина (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/maketirovanie-iz-plastilina-fv.html"
+   },
+   {
+    "name": "Макетчик художественных макетов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/maketchik-hudozhestvennyh-maketov-r.html"
+   },
+   {
+    "name": "Макраме (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/makrame-r.html"
+   },
+   {
+    "name": "Малярное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/malyarnoe-delo.html"
+   },
+   {
+    "name": "Массажист (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/massazhist.html"
+   },
+   {
+    "name": "Мастер высокой кухни (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/master-vysokoy-kuhni-r.html"
+   },
+   {
+    "name": "Мастер кукол (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/master-kukol-narodnaya-loskutnaya-kukla-fv.html"
+   },
+   {
+    "name": "Мастер народно-художественных промыслов (Городецкая роспись) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/dekorativno-prikladnoe-iskusstvo-gorodetskaya-rospis-r.html"
+   },
+   {
+    "name": "Мастер народно-художественных промыслов (золотное шитьё) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/zolotnoe-shite-r.html"
+   },
+   {
+    "name": "Мастер народно-художественных промыслов (изготовление изделий из кожи) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-axessuarov-iz-kozhi-r.html"
+   },
+   {
+    "name": "Мастер народно-художественных промыслов (изготовление изделий из меха) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izgotovlenie-suvenirov-iz-meha-r.html"
+   },
+   {
+    "name": "Мастер народно-художественных промыслов (лоскутное шитье) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/loskutnoe-shite-r.html"
+   },
+   {
+    "name": "Мастер народно-художественных промыслов (Саамское рукоделие) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/saamskoe-rukodelie-r.html"
+   },
+   {
+    "name": "Мастер народно-художественных промыслов (Чувашская вышивка) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/chuvashskaya-vyshivka-r.html"
+   },
+   {
+    "name": "Мастер пищевого арт-декора (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/master-pischevogo-art-dekora.html"
+   },
+   {
+    "name": "Мастер по обработке текста (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/obrabotka-texta.html"
+   },
+   {
+    "name": "Мастер по обработке цифровой информации (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/master-po-obrabotke-tsifrovoy-informatsii-o.html"
+   },
+   {
+    "name": "Мастер по приготовлению пиццы (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/master-po-izgotovleniyu-pitstsy.html"
+   },
+   {
+    "name": "Машинное обучение и большие данные (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/mashinnoe-obuchenie-i-bolshie-dannye-r.html"
+   },
+   {
+    "name": "Мебельщик (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/mebelschik.html"
+   },
+   {
+    "name": "Медицинская оптика (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/meditsinskaya-optika-r.html"
+   },
+   {
+    "name": "Медицинский администратор (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/meditsinskiy-administrator-r.html"
+   },
+   {
+    "name": "Медицинский и лабораторный анализ (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/meditsinskiy-i-laboratornyy-analiz.html"
+   },
+   {
+    "name": "Медицинский и социальный уход (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/meditsinskiy-i-sotsialnyy-uhod.html"
+   },
+   {
+    "name": "Менеджер по продажам страховых продуктов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/menedzher-po-prodazham-strahovyh-produktov-r.html"
+   },
+   {
+    "name": "Метрология (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/metrologiya-r.html"
+   },
+   {
+    "name": "Мехатроника (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/mehatronika-r.html"
+   },
+   {
+    "name": "Модельер одежды (метод наколки) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/modelirovanie-odezhdy-metodom-nakolki.html"
+   },
+   {
+    "name": "Мозаичник (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/mozaichnik-fv.html"
+   },
+   {
+    "name": "Мокрое валяние (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/valyanie-igrushki-fv-1.html"
+   },
+   {
+    "name": "Молекулярная кухня (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/molekulyarnaya-kuhnya-r.html"
+   },
+   {
+    "name": "Монтажник радиоэлектронной аппаратуры (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/montazhnik-radioelektronnoy-apparatury.html"
+   },
+   {
+    "name": "Музейное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/muzeynoe-delo.html"
+   },
+   {
+    "name": "Мультимедийная журналистика (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/multimediynaya-zhurnalistika.html"
+   },
+   {
+    "name": "Мультипликация (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/multiplikatsiya-r.html"
+   },
+   {
+    "name": "Мыловарение (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/mylovarenie-fv.html"
+   }
+  ]
+ },
+ {
+  "letter": "Н",
+  "items": [
+   {
+    "name": "Налоговый консультант (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/nalogovyy-konsultant.html"
+   },
+   {
+    "name": "Ниткография (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/nitkografiya-fv.html"
+   },
+   {
+    "name": "Ногтевой сервис (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/nogtevoy-servis.html"
+   }
+  ]
+ },
+ {
+  "letter": "О",
+  "items": [
+   {
+    "name": "Облицовка плиткой (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/oblitsovka-plitkoy.html"
+   },
+   {
+    "name": "Обслуживание авиационной техники (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/obsluzhivanie-aviatsionnoy-tehniki-r.html"
+   },
+   {
+    "name": "Обслуживание грузовой техники (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/obsluzhivanie-gruzovoy-tehniki-r.html"
+   },
+   {
+    "name": "Обувной сервис (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/obuvnoy-servis-fv.html"
+   },
+   {
+    "name": "Огранка ювелирных вставок (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ogranka-yuvelirnyh-vstavok.html"
+   },
+   {
+    "name": "Озеленитель (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ozelenitel-fv.html"
+   },
+   {
+    "name": "Оленеводство (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/olenevodstvo-r.html"
+   },
+   {
+    "name": "Оператор беспилотного летательного аппарата (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/operator-bespilotnogo-letatelnogo-apparata-r.html"
+   },
+   {
+    "name": "Опиловщик фасонных отливок (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/opilovschik-fasonnyh-otlivok-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "П",
+  "items": [
+   {
+    "name": "Парикмахерское искусство (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/parikmaherskoe-iskusstvo.html"
+   },
+   {
+    "name": "Педагог дополнительного образования (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pedagog-dopolnitelnogo-obrazovaniya-r.html"
+   },
+   {
+    "name": "Переводчик (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/perevodchik.html"
+   },
+   {
+    "name": "Печное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pechnoe-delo-r.html"
+   },
+   {
+    "name": "Пирография (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pirografiya-fv.html"
+   },
+   {
+    "name": "Плетение из искусственного ротанга (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pletenie-iz-iskusstvennogo-rotanga-fv.html"
+   },
+   {
+    "name": "Плотницкое дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/plotnitskoe-delo-r.html"
+   },
+   {
+    "name": "Повар региональной кухни (выпечка расстегай Северный) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/vypechka-rasstegay-severnyy-r.html"
+   },
+   {
+    "name": "Повар региональной кухни (приготовление Коми-шаньга) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/komi-shanga-r.html"
+   },
+   {
+    "name": "Повар региональной кухни (приготовление Тувинского хужуура) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tuvinskiy-huzhuur-r.html"
+   },
+   {
+    "name": "Повар региональной кухни (приготовление уральских посекунчиков) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/povar-regionalnoy-kuhni-prigotovlenie-uralskih-posekunchikov-r.html"
+   },
+   {
+    "name": "Повар региональной кухни (хакасская кухня) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/povar-natsionalnoy-hakasskoy-kuhni-r.html"
+   },
+   {
+    "name": "Повар-сушист (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/povar-sushist-r.html"
+   },
+   {
+    "name": "Поварское дело (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/povarskoe-delo.html"
+   },
+   {
+    "name": "Полиграфическое дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/poligraficheskoe-delo-o.html"
+   },
+   {
+    "name": "Помощник клинёра (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-klinera-fv.html"
+   },
+   {
+    "name": "Помощник овощевода (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-ovoschevoda-fv.html"
+   },
+   {
+    "name": "Помощник повара (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-povara.html"
+   },
+   {
+    "name": "Помощник садовника (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-sadovnika-fv.html"
+   },
+   {
+    "name": "Помощник тренера (Адаптивное тхеквондо) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-trenera-adaptivnoe-thekvondo-fv-1.html"
+   },
+   {
+    "name": "Помощник тренера (Адаптивное тхэквондо) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-trenera-adaptivnoe-thekvondo-fv.html"
+   },
+   {
+    "name": "Помощник тренера (Адаптивный кикбоксинг) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-trenera-adaptivnyy-kikboxing.html"
+   },
+   {
+    "name": "Помощник тренера (Адаптивный твирлинг) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-trenera-adaptivnyy-tvirling-fv.html"
+   },
+   {
+    "name": "Помощник фельдшера малонаселённых пунктов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pomoschnik-feldshera-malonaselennyh-punktov.html"
+   },
+   {
+    "name": "Портной (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/portnoy.html"
+   },
+   {
+    "name": "Походная кулинария (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pohodnaya-kulinariya-r.html"
+   },
+   {
+    "name": "Предпринимательство (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/predprinimatelstvo-r.html"
+   },
+   {
+    "name": "Приготовление горячих бутербродов (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/prigotovlenie-goryachih-zakusok-fv.html"
+   },
+   {
+    "name": "Приготовление кыстыбый (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/prigotovlenie-kystybyy-fv.html"
+   },
+   {
+    "name": "Приготовление спринг-роллов (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/prigotovlenie-spring-rollov-fv.html"
+   },
+   {
+    "name": "Программные решения для бизнеса (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/programmnye-resheniya-dlya-biznesa-r.html"
+   },
+   {
+    "name": "Промышленная механика и монтаж (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/promyshlennaya-mehanika-i-montazh-r.html"
+   },
+   {
+    "name": "Промышленная робототехника (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/promyshlennaya-robototehnika.html"
+   },
+   {
+    "name": "Пряничное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pryanichnoe-delo-r.html"
+   },
+   {
+    "name": "Психология (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/psihologiya.html"
+   },
+   {
+    "name": "Пчеловодство (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pchelovodstvo-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "Р",
+  "items": [
+   {
+    "name": "Работник зеленого хозяйства (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/rabotnik-zelenogo-hozyaystva-r.html"
+   },
+   {
+    "name": "Рабочий лесного хозяйства (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/rabochiy-lesnogo-hozyaystva-r.html"
+   },
+   {
+    "name": "Разработка и сборка БПЛА (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-razrabotke-i-sborke-bpla-r.html"
+   },
+   {
+    "name": "Разработка компьютерных игр (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/razrabotka-kompyuternyh-igr-r.html"
+   },
+   {
+    "name": "Разработка мобильных приложений (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/razrabotka-mobilnyh-prilozheniy-r.html"
+   },
+   {
+    "name": "Разработчик виртуальной и дополненной реальности (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/razrabotchik-virtualnoy-i-dopolnennoy-realnosti.html"
+   },
+   {
+    "name": "Реверсивный инжиниринг (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/reversivnyy-inzhiniring-r.html"
+   },
+   {
+    "name": "Резьба по дереву (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/rezba-po-derevu.html"
+   },
+   {
+    "name": "Релейная защита и автоматизация электро-энергетических систем (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/releynaya-zaschita-i-avtomatizatsiya-elektro-energeticheskih-sistem-r.html"
+   },
+   {
+    "name": "Ремесленная керамика (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/remeslennaya-keramika-fv.html"
+   },
+   {
+    "name": "Ремонт и обслуживание автомобилей (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/remont-i-obsluzhivanie-avtomobiley.html"
+   },
+   {
+    "name": "Ремонт обуви (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/remont-obuvi.html"
+   },
+   {
+    "name": "Ресторанный сервис (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/restorannyy-servis.html"
+   },
+   {
+    "name": "Рисование картин гуашью (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/risovanie-kartin-guashyu-fv.html"
+   },
+   {
+    "name": "Рисование картин пластилином (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/risovanie-kartin-plastilinom-fv.html"
+   },
+   {
+    "name": "Рисование картин пуговицами (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/risovanie-kartin-pugovitsami-fv.html"
+   },
+   {
+    "name": "Робоарт (Роботизированное искусство) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/roboart-robotizirovannoe-iskusstvo-r.html"
+   },
+   {
+    "name": "Робототехника (Лего) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/robototehnika-lego-fv.html"
+   },
+   {
+    "name": "Робототехника (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/robototehnika.html"
+   },
+   {
+    "name": "Роспись по шелку (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/rospis-po-shelku.html"
+   },
+   {
+    "name": "Ручная вышивка (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ruchnaya-vyshivka-fv.html"
+   },
+   {
+    "name": "Ручная лепка из глины (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ruchnaya-lepka-iz-gliny-fv.html"
+   },
+   {
+    "name": "Ручная работа по дереву (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ruchnaya-rabota-po-derevu-fv.html"
+   }
+  ]
+ },
+ {
+  "letter": "С",
+  "items": [
+   {
+    "name": "Садовник (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sadovnik-r.html"
+   },
+   {
+    "name": "Сборка автомобильных жгутов",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sborka-avtomobilnyh-zhgutov.html"
+   },
+   {
+    "name": "Сборка – разборка электронного оборудования (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sborka-razborka-elektronnogo-oborudovaniya.html"
+   },
+   {
+    "name": "Сварочные технологии (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/svarochnye-tehnologii.html"
+   },
+   {
+    "name": "Семеновод (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/semenovod-r.html"
+   },
+   {
+    "name": "Сервис на воздушном транспорте (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/servis-na-vozdushnom-transporte-r.html"
+   },
+   {
+    "name": "Сетевое и системное администрирование (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/setevoe-i-sistemnoe-administrirovanie.html"
+   },
+   {
+    "name": "Сити-фермерство (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/siti-fermerstvo-r.html"
+   },
+   {
+    "name": "Слесарное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/slesarnoe-delo.html"
+   },
+   {
+    "name": "Слесарь санитарно-технических систем (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/slesar-sanitarno-tehnicheskih-sistem-r.html"
+   },
+   {
+    "name": "Сметное дело (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/smetnoe-delo-r.html"
+   },
+   {
+    "name": "Современная техника декорирования (папертоль) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sovremennaya-tehnika-dekorirovaniya-papertol-fv.html"
+   },
+   {
+    "name": "Создание изделий из бисера (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sozdanie-izdeliy-iz-bisera-izgotovlenie-ukrasheniy-fv.html"
+   },
+   {
+    "name": "Создание цветочных композиций (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sozdanie-tsvetochnyh-kompozitsiy-fv.html"
+   },
+   {
+    "name": "Сортировщик полимерного вторсырья (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sortirovschik-polimernogo-vtorsyrya-fv.html"
+   },
+   {
+    "name": "Социальная работа (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sotsialnaya-rabota-r.html"
+   },
+   {
+    "name": "Специалист компьютерной графики (моушн-дизайнер) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-kompyuternoy-grafiki-moushn-dizayner-r.html"
+   },
+   {
+    "name": "Специалист по организации производства (Бережливое производство) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-organizatsii-proizvodstva-berezhlivoe-proizvodstvo-r.html"
+   },
+   {
+    "name": "Специалист по охране труда (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-ohrane-truda-r.html"
+   },
+   {
+    "name": "Специалист по подбору персонала (рекрутер) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-podboru-personala-rekruter-r.html"
+   },
+   {
+    "name": "Специалист по рекламе (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-reklame-r.html"
+   },
+   {
+    "name": "Специалист по социальной реабилитации (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-sotsialnoy-reabilitatsii-r.html"
+   },
+   {
+    "name": "Специалист по сурдокоммуникации (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-surdokommunikatsii-r.html"
+   },
+   {
+    "name": "Специалист по типовым решениям 1С (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-tipovym-resheniyam-1s.html"
+   },
+   {
+    "name": "Специалист по управлению персоналом (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-upravleniyu-personalom-r.html"
+   },
+   {
+    "name": "Специалист по финансам общественного сектора (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-finansam-obschestvennogo-sektora-r.html"
+   },
+   {
+    "name": "Специалист по экологической безопасности (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/spetsialist-po-ekologicheskoy-bezopasnosti-r.html"
+   },
+   {
+    "name": "Специалист почтовой связи (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/pochtovaya-svyaz.html"
+   },
+   {
+    "name": "Столярное дело (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/stolyarnoe-delo.html"
+   },
+   {
+    "name": "Стоп-моушн (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/stop-moushn-fv.html"
+   },
+   {
+    "name": "Судья по адаптивному тхеквондо (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/sudya-po-adaptivnomu-thekvondo.html"
+   },
+   {
+    "name": "Сухое строительство и штукатурные работы (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/suhoe-stroitelstvo-i-shtukaturnye-raboty.html"
+   },
+   {
+    "name": "Сценическое мастерство (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/stsenicheskoe-masterstvo-r.html"
+   },
+   {
+    "name": "Сыроварение (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/syrovarenie-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "Т",
+  "items": [
+   {
+    "name": "Театр малых форм (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/teatr-malyh-form-fv.html"
+   },
+   {
+    "name": "Тестирование программного обеспечения (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/testirovanie-programmnogo-obespecheniya-r.html"
+   },
+   {
+    "name": "Техник-протезист (Р, О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tehnik-protezist-r.html"
+   },
+   {
+    "name": "Технологии информационного моделирования &quot;BIM&quot; (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tehnologii-informatsionnogo-modelirovaniya-bim-r.html"
+   },
+   {
+    "name": "Типографское дело (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tipografskoe-delo-fv.html"
+   },
+   {
+    "name": "Ткач (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tkach-fv.html"
+   },
+   {
+    "name": "Токарные работы на станках с ЧПУ (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tokarnye-raboty-na-stankah-s-chpu.html"
+   },
+   {
+    "name": "Торговое дело (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/torgovoe-delo-o.html"
+   }
+  ]
+ },
+ {
+  "letter": "У",
+  "items": [
+   {
+    "name": "Управление складированием (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/upravlenie-skladirovaniem-r.html"
+   },
+   {
+    "name": "Учитель начальных классов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/uchitel-nachalnyh-klassov.html"
+   },
+   {
+    "name": "Учитель-предметник (английский язык) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/uchitel-predmetnik-angliyskiy-yazyk-r.html"
+   },
+   {
+    "name": "Учитель-предметник (биология) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/uchitel-predmetnik-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "Ф",
+  "items": [
+   {
+    "name": "Фармация (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/farmatsiya-r.html"
+   },
+   {
+    "name": "Фарфорист (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/farforist-r.html"
+   },
+   {
+    "name": "Фельдшер (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/feldsher-r.html"
+   },
+   {
+    "name": "Финансовый консультант (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/finansovyy-konsultant-r.html"
+   },
+   {
+    "name": "Флористика  (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/floristika-o.html"
+   },
+   {
+    "name": "Фотограф (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/fotograf-o.html"
+   },
+   {
+    "name": "Фрезерные работы на станках с ЧПУ (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/frezernye-raboty-na-stankah-s-chpu-r.html"
+   },
+   {
+    "name": "Фуд-флористика (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/fud-floristika-r.html"
+   }
+  ]
+ },
+ {
+  "letter": "Х",
+  "items": [
+   {
+    "name": "Художественная обработка дерева (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhestvennaya-obrabotka-dereva-r.html"
+   },
+   {
+    "name": "Художественная обработка стекла (Фьюзинг) (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/fyuzing.html"
+   },
+   {
+    "name": "Художественная роспись (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhestvennaya-rospis.html"
+   },
+   {
+    "name": "Художественная роспись по дереву (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhestvennaya-rospis-po-derevu-fv.html"
+   },
+   {
+    "name": "Художественное вышивание (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhestvennoe-vyshivanie-r.html"
+   },
+   {
+    "name": "Художественное слово (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhestvennoe-slovo-fv.html"
+   },
+   {
+    "name": "Художественное творчество (Декупаж) (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhestvennoe-tvorchestvo-dekupazh.html"
+   },
+   {
+    "name": "Художественный дизайн (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhestvennyy-dizayn-r.html"
+   },
+   {
+    "name": "Художник по гриму (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/hudozhnik-po-grimu-r.html"
+   },
+   {
+    "name": "Художник-оформитель (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/izobrazitelnoe-iskusstvo.html"
+   }
+  ]
+ },
+ {
+  "letter": "Ц",
+  "items": [
+   {
+    "name": "Цифровая метрология (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tsifrovaya-metrologiya-r.html"
+   },
+   {
+    "name": "Цифровая трансформация бизнеса (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tsifrovaya-transformatsiya-biznesa-r.html"
+   },
+   {
+    "name": "Цифровизация АПК",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tsifrovizatsiya-apk.html"
+   },
+   {
+    "name": "Цифровой куратор (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/tsifrovoy-kurator.html"
+   }
+  ]
+ },
+ {
+  "letter": "Ш",
+  "items": [
+   {
+    "name": "Швейное дело (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/shveynoe-delo-fv.html"
+   },
+   {
+    "name": "Швея (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/shveya-o.html"
+   },
+   {
+    "name": "Шелонская вязка (ФВ)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/shelonskaya-vyazka.html"
+   }
+  ]
+ },
+ {
+  "letter": "Э",
+  "items": [
+   {
+    "name": "Экономика и бухгалтерский учет (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/ekonomika-i-buhgalterskiy-uchet.html"
+   },
+   {
+    "name": "Экспедирование грузов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/expedirovanie-gruzov-r.html"
+   },
+   {
+    "name": "Эксперт по качеству (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/expert-po-kachestvu-r.html"
+   },
+   {
+    "name": "Эксплуатация БАС (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/expluatatsiya-bas-r.html"
+   },
+   {
+    "name": "Эксплуатация сельскохозяйственных машин (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/expluatatsiya-selskohozyaystvennyh-mashin-r.html"
+   },
+   {
+    "name": "Эксплуатация сервисных роботов (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/expluatatsiya-servisnyh-robotov.html"
+   },
+   {
+    "name": "Электромонтаж (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/elektromontazh.html"
+   },
+   {
+    "name": "Электроника (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/elektronika.html"
+   },
+   {
+    "name": "Электропривод и автоматика (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/elektroprivod-i-avtomatika-o.html"
+   }
+  ]
+ },
+ {
+  "letter": "Ю",
+  "items": [
+   {
+    "name": "Ювелирное дело (Р,О)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/yuvelirnoe-delo.html"
+   },
+   {
+    "name": "Юриспруденция (Р)",
+    "url": "https://abilympics-russia.ru/competencies/Komp2026/yurisprudentsiya-r.html"
+   }
+  ]
+ }
+]

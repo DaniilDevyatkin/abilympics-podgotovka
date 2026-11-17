@@ -1,0 +1,45 @@
+{
+ "pages_total": 39,
+ "categories": {
+  "shkolnik": {
+   "pages": 7,
+   "ranges": [
+    [
+     7,
+     11
+    ],
+    [
+     16,
+     17
+    ]
+   ]
+  },
+  "student": {
+   "pages": 8,
+   "ranges": [
+    [
+     8,
+     13
+    ],
+    [
+     16,
+     17
+    ]
+   ]
+  },
+  "specialist": {
+   "pages": 17,
+   "ranges": [
+    [
+     8,
+     9
+    ],
+    [
+     13,
+     27
+    ]
+   ]
+  }
+ },
+ "split_ok": true
+}

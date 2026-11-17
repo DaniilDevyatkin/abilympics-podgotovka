@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Компетенции 2026 — Абилимпикс Башкортостан</title>
+<meta name="description" content="Полный перечень компетенций Национального чемпионата «Абилимпикс» 2026: 308 названий со ссылками на официальные страницы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* ——— страница компетенций ——— */
+
+.page-head{
+  padding:clamp(24px,3.4vw,52px) var(--gutter) clamp(16px,2vw,26px);
+  border-bottom:2px solid var(--blue);
+}
+.crumbs{display:flex;align-items:center;gap:.5em;margin-bottom:clamp(18px,2.4vw,30px)}
+.crumbs a{border-bottom:1px solid var(--blue)}
+.crumbs a:hover{background:var(--blue);color:var(--white);border-bottom-color:transparent}
+
+h1{
+  margin:0;
+  font-size:clamp(38px,9vw,132px);
+  font-weight:700;line-height:.86;letter-spacing:-.02em;
+  text-transform:uppercase;
+}
+h1 .y{display:block}
+h1 .n{display:block;font-weight:400;letter-spacing:-.01em}
+
+
+/* ——— панель поиска ——— */
+.toolbar{
+  position:sticky;top:var(--header-h);z-index:15;
+  background:var(--white);
+  border-bottom:2px solid var(--blue);
+  padding:clamp(12px,1.6vw,18px) var(--gutter) 0;
+}
+.search{display:flex;align-items:center;gap:12px}
+.search__field{position:relative;flex:1;min-width:0}
+.search input{
+  width:100%;
+  padding:12px 44px 12px 0;
+  font:inherit;font-size:clamp(15px,1.5vw,18px);font-weight:500;
+  color:var(--blue);background:transparent;
+  border:0;border-bottom:2px solid var(--blue);
+  border-radius:0;
+}
+.search input::placeholder{color:var(--blue);opacity:.8}
+.search input:focus{outline:0;border-bottom-width:4px}
+.search input:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.search__clear{
+  position:absolute;right:0;top:50%;translate:0 -50%;
+  width:32px;height:32px;display:grid;place-items:center;
+  background:transparent;color:var(--blue);border:0;cursor:pointer;
+  opacity:0;pointer-events:none;transition:opacity .15s var(--ease);
+}
+.search__clear.is-on{opacity:1;pointer-events:auto}
+.search__clear:hover{background:var(--blue);color:var(--white)}
+.search__count{
+  font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  white-space:nowrap;font-variant-numeric:tabular-nums;
+}
+
+/* ——— алфавит ——— */
+.chips{
+  display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;
+  padding:clamp(12px,1.6vw,16px) 0;
+  scroll-padding-left:var(--gutter);
+}
+.chips::-webkit-scrollbar{display:none}
+.chip{
+  flex:none;display:inline-flex;align-items:baseline;gap:5px;
+  padding:8px 12px;border:2px solid var(--blue);
+  font-size:13px;font-weight:600;line-height:1;
+  transition:background .15s var(--ease),color .15s var(--ease);
+}
+.chip:hover,.chip:focus-visible{background:var(--blue);color:var(--white)}
+.chip.is-empty{opacity:.28}
+.chip__n{font-size:10px;font-weight:500;font-variant-numeric:tabular-nums;opacity:.7}
+
+/* ——— группы ——— */
+.list{padding:0 var(--gutter) clamp(40px,6vw,90px)}
+.group{
+  display:grid;
+  grid-template-columns:clamp(52px,7vw,96px) 1fr;
+  gap:clamp(12px,2.4vw,40px);
+  padding:clamp(20px,2.6vw,34px) 0;
+  border-bottom:1px solid var(--blue);
+  scroll-margin-top:calc(var(--header-h) + 128px);
+}
+.group:last-child{border-bottom:0}
+.group__letter{
+  margin:0;
+  font-size:clamp(30px,4.2vw,58px);font-weight:700;line-height:.9;
+  letter-spacing:-.01em;
+  position:sticky;top:calc(var(--header-h) + 120px);
+  align-self:start;
+}
+.group__letter::after{
+  content:"";display:block;width:26px;height:3px;margin-top:10px;background:var(--blue);
+}
+.comp-list{
+  margin:0;padding:0;list-style:none;
+  display:grid;grid-template-columns:1fr;gap:0;
+}
+@media (min-width:760px){.comp-list{grid-template-columns:1fr 1fr;column-gap:clamp(20px,3vw,48px)}}
+@media (min-width:1280px){.comp-list{grid-template-columns:1fr 1fr 1fr}}
+
+.comp{min-width:0}
+.comp__link{
+  display:block;
+  padding:8px 0;
+  font-size:clamp(14px,1.15vw,15.5px);line-height:1.35;
+  transition:background .12s var(--ease),color .12s var(--ease),padding-left .12s var(--ease);
+}
+.comp__link:hover,.comp__link:focus-visible{
+  background:var(--blue);color:var(--white);
+  padding-left:8px;padding-right:8px;
+}
+
+.empty{
+  display:none;
+  padding:clamp(40px,6vw,80px) 0;
+  font-size:clamp(16px,2vw,22px);font-weight:500;
+}
+.empty.is-on{display:block}
+.empty button{
+  margin-top:16px;padding:10px 16px;
+  font:inherit;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--white);background:var(--blue);border:2px solid var(--blue);cursor:pointer;
+}
+.empty button:hover{background:var(--white);color:var(--blue)}
+
+.to-top{
+  position:fixed;right:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,28px);z-index:18;
+  width:44px;height:44px;display:grid;place-items:center;
+  background:var(--blue);color:var(--white);border:2px solid var(--blue);
+  opacity:0;pointer-events:none;transition:opacity .18s var(--ease);
+}
+.to-top.is-on{opacity:1;pointer-events:auto}
+.to-top:hover{background:var(--white);color:var(--blue)}
+
+@media (max-width:719px){
+  .toolbar{padding-top:10px}
+  .group{grid-template-columns:1fr;gap:10px}
+  .group__letter{position:static}
+  .group__letter::after{margin-top:8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#list">К списку компетенций</a>
+
+<header class="top">
+  <a class="brand" href="./" aria-label="Абилимпикс Башкортостан — на главную">
+    <svg class="brand__mark" viewBox="0 0 27.27 32.78" aria-hidden="true"><path fill-rule="nonzero" d="M22.59 19.33L20.93 15.74L20.93 15.74L13.62 0.00L13.62 0.00L6.34 15.71L6.34 15.71L4.68 19.33L4.68 19.33L0.00 29.40L0.00 29.40L0.03 29.43L0.03 29.43C1.10 30.72 2.39 31.89 3.82 32.78L3.82 32.78L5.28 29.43L5.28 29.43L8.47 22.25L8.47 22.25C10.03 23.02 11.79 23.45 13.62 23.45L13.62 23.45C15.48 23.45 17.24 23.02 18.77 22.29L18.77 22.29L21.96 29.43L21.96 29.43L23.45 32.78L23.45 32.78C24.88 31.89 26.17 30.72 27.24 29.43L27.24 29.43L27.27 29.43L27.27 29.43L22.59 19.33ZM13.62 19.07C12.29 19.07 10.99 18.80 9.83 18.27L9.83 18.27L13.62 9.43L13.62 9.43L17.41 18.27L17.41 18.27C16.24 18.80 14.95 19.07 13.62 19.07Z"/></svg>
+    <span class="brand__rule" aria-hidden="true"></span>
+    <span class="brand__text">
+      <span class="brand__name">Абилимпикс</span>
+      <span class="brand__sub region-sub">Башкортостан 2026</span>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Основная навигация">
+    <a class="nav__link" href="./">Главная</a>
+    <a class="nav__link is-current" href="kompetentsii-2026.html" aria-current="page">Компетенции 2026</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page-head">
+    <nav class="crumbs label" aria-label="Хлебные крошки">
+      <a href="./">Главная</a>
+      <span aria-hidden="true">/</span>
+      <span>Компетенции 2026</span>
+    </nav>
+    <h1><span class="y">Компетенции</span><span class="n">2026</span></h1>
+  </div>
+
+  <div class="toolbar">
+    <div class="search">
+      <div class="search__field">
+        <label class="sr-only" for="q">Поиск по названию компетенции</label>
+        <input id="q" type="search" placeholder="Найти компетенцию — например, «сварка»" autocomplete="off" aria-controls="list" aria-describedby="found">
+        <button class="search__clear" id="clear" type="button" aria-label="Очистить поиск">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+      </div>
+      <p class="search__count" id="found" role="status" aria-live="polite">308 из 308</p>
+    </div>
+    <nav class="chips" aria-label="Перейти к разделу алфавита">
+    <a class="chip" href="#g-3D">3D<span class="chip__n">1</span></a>
+    <a class="chip" href="#g-А">А<span class="chip__n">9</span></a>
+    <a class="chip" href="#g-Б">Б<span class="chip__n">8</span></a>
+    <a class="chip" href="#g-В">В<span class="chip__n">18</span></a>
+    <a class="chip" href="#g-Г">Г<span class="chip__n">5</span></a>
+    <a class="chip" href="#g-Д">Д<span class="chip__n">13</span></a>
+    <a class="chip" href="#g-Ж">Ж<span class="chip__n">2</span></a>
+    <a class="chip" href="#g-З">З<span class="chip__n">4</span></a>
+    <a class="chip" href="#g-И">И<span class="chip__n">30</span></a>
+    <a class="chip" href="#g-К">К<span class="chip__n">24</span></a>
+    <a class="chip" href="#g-Л">Л<span class="chip__n">5</span></a>
+    <a class="chip" href="#g-М">М<span class="chip__n">36</span></a>
+    <a class="chip" href="#g-Н">Н<span class="chip__n">3</span></a>
+    <a class="chip" href="#g-О">О<span class="chip__n">9</span></a>
+    <a class="chip" href="#g-П">П<span class="chip__n">36</span></a>
+    <a class="chip" href="#g-Р">Р<span class="chip__n">23</span></a>
+    <a class="chip" href="#g-С">С<span class="chip__n">34</span></a>
+    <a class="chip" href="#g-Т">Т<span class="chip__n">8</span></a>
+    <a class="chip" href="#g-У">У<span class="chip__n">4</span></a>
+    <a class="chip" href="#g-Ф">Ф<span class="chip__n">8</span></a>
+    <a class="chip" href="#g-Х">Х<span class="chip__n">10</span></a>
+    <a class="chip" href="#g-Ц">Ц<span class="chip__n">4</span></a>
+    <a class="chip" href="#g-Ш">Ш<span class="chip__n">3</span></a>
+    <a class="chip" href="#g-Э">Э<span class="chip__n">9</span></a>
+    <a class="chip" href="#g-Ю">Ю<span class="chip__n">2</span></a>
+    </nav>
+  </div>
+
+
+  <div class="list" id="list">
+    <p class="empty" id="empty">По запросу ничего не нашлось. <button type="button" id="reset">Показать все</button></p>
+  <section class="group" id="g-3D" aria-labelledby="h-g-3D">
+    <h2 class="group__letter" id="h-g-3D">3D</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/3d-dizayn-yuvelirnyh-izdeliy-cad-r.html">3D дизайн ювелирных изделий (CAD) (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-А" aria-labelledby="h-g-А">
+    <h2 class="group__letter" id="h-g-А">А</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/turizm-r.html">Агент по туризму (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/agroboty-agroroboty-r.html">Агроботы (Агророботы) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/agronomiya.html">Агрономия (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/bystroe-prototipirovanie.html">Аддитивное производство (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/administrirovanie-astra-linux-r.html">Администрирование Астра Линукс (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/administrirovanie-baz-dannyh.html">Администрирование баз данных (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/administrirovanie-otelya-1.html">Администрирование отеля (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/animator-r.html">Аниматор (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/arhitektor-buduschego-neyrosetevoe-iskusstvo-r.html">Архитектор будущего - нейросетевое искусство (Р,О)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Б" aria-labelledby="h-g-Б">
+    <h2 class="group__letter" id="h-g-Б">Б</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/barista.html">Бариста (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/bibliotechno-informatsionnaya-deyatelnost.html">Библиотечно-информационная деятельность (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/biseropletenie.html">Бисероплетение (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/blinopek-r.html">Блинопек (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/blokcheyn-tehnologii-r.html">Блокчейн-технологии (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/brovist-r.html">Бровист (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/brosh-iz-floamirana-fv.html">Брошь из фоамирана (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/broshyurovka-i-perepletnoe-delo-r.html">Брошюровка и переплетное дело (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-В" aria-labelledby="h-g-В">
+    <h2 class="group__letter" id="h-g-В">В</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/valyanie-igrushki-fv.html">Валяние игрушки (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/veb-razrabotka.html">Веб - разработка (программирование) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/veb-dizayn.html">Веб-дизайн (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/velomehanika-r.html">Веломеханика (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/veterinariya-r.html">Ветеринария (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vizazh.html">Визаж (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/voditel-taxi-r.html">Водитель такси (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vodnye-tehnologii-r.html">Водные технологии (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vozhatyy.html">Вожатый (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/voylochnoe-iskusstvo-r.html">Войлочное искусство (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vypechka-osetinskih-pirogov-o.html">Выпечка осетинских пирогов (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vypechka-hlebobulochnyh-izdeliy.html">Выпечка хлебобулочных изделий (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vypilivanie-izdeliy-iz-fanery-fv.html">Выпиливание изделий из фанеры (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vyshivka-krestikom-fv.html">Вышивка крестиком (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vyazanie-iz-trikotazhnoy-pryazhi-fv.html">Вязание из трикотажной пряжи (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vyazanie-kryuchkom.html">Вязание крючком (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vyazanie-na-stanke-fv.html">Вязание на станке (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vyazanie-spitsami.html">Вязание спицами (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Г" aria-labelledby="h-g-Г">
+    <h2 class="group__letter" id="h-g-Г">Г</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/geodeziya-r.html">Геодезия (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/gid-exkursovod-r.html">Гид-экскурсовод (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/goncharnoe-delo.html">Гончарное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/gornichnaya-r-1.html">Горничная (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/graficheskiy-dizayn-o.html">Графический дизайн (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Д" aria-labelledby="h-g-Д">
+    <h2 class="group__letter" id="h-g-Д">Д</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/dekorativnaya-mozaika-fv.html">Декоративная мозаика (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dekorativnye-raboty-r.html">Декоративные работы (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dekorirovanie-predmetov-interera-fv.html">Декорирование предметов интерьера (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dizayn-interera-r.html">Дизайн интерьера (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dizayn-modnoy-odezhdy-i-axessuarov-r.html">Дизайн модной одежды и аксессуаров (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dizayn-personazhey-animatsiya.html">Дизайн персонажей/Анимация (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dizayn-plakata.html">Дизайн плаката (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dizayn-proektirovanie-prostranstva.html">Дизайн-проектирование пространства (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dizayner-myagkoy-igrushki-r.html">Дизайнер мягкой игрушки (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dispetcher-avtomobilnogo-transporta-r.html">Диспетчер автомобильного транспорта (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dokumentatsionnoe-obespechenie-upravleniya-i-arhivovedeniya.html">Документационное обеспечение управления и архивоведение (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/doshkolnaya-defektologiya-r.html">Дошкольная дефектология (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/doshkolnoe-vospitanie.html">Дошкольное воспитание (Р,О)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Ж" aria-labelledby="h-g-Ж">
+    <h2 class="group__letter" id="h-g-Ж">Ж</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/zhestovoe-iskusstvo-r.html">Жестовое искусство (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/zhestyanschik-r.html">Жестянщик (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-З" aria-labelledby="h-g-З">
+    <h2 class="group__letter" id="h-g-З">З</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/zakroyschik-r.html">Закройщик (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/zaschitnaya-polirovka-kuzova-avtomobilya-r.html">Защитная полировка кузова автомобиля (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/zvukorezhissura-1.html">Звукорежиссура (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/zubnoy-tehnik.html">Зубной техник (Р, О)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-И" aria-labelledby="h-g-И">
+    <h2 class="group__letter" id="h-g-И">И</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovitel-pischevyh-polufabrikatov-r.html">Изготовитель пищевых полуфабрикатов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-aromaticheskih-svechey-fv.html">Изготовление ароматических свечей (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-vyazannogo-izdeliya-fv.html">Изготовление вязаного изделия (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-glinyanyh-izdeliy-fv.html">Изготовление глиняных изделий (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-derevyannoy-igrushki-fv.html">Изготовление деревянной игрушки (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-produktsii-dlya-spa-protsedur-r.html">Изготовление изделий для СПА процедур (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-izdeliy-iz-loskutnoy-mozaiki-fv.html">Изготовление изделий из лоскутной мозаики (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-izdeliy-iz-polimernyh-materialov-r.html">Изготовление изделий из полимерных материалов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-izdeliy-iz-rotanga-r.html">Изготовление изделий из ротанга (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-izdeliy-iz-fetra-fv.html">Изготовление изделий из фетра (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-kartin-iz-payetok-fv.html">Изготовление картин из пайеток (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-morozhennogo.html">Изготовление мороженого (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-myagkoy-igrushki-fv.html">Изготовление мягкой игрушки (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-predmetov-interera-iz-gipsa-fv.html">Изготовление предметов интерьера из гипса (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovitel-izdeliy-iz-beresty.html">Изготовление художественных изделий из бересты (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izdatel-fv.html">Издатель (Компьютерные публикации в Publisher) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/inzheneriya-lesopolzovaniya-i-lesovosstanovleniya.html">Инженерия лесопользования и лесовосстановления (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/inzhenernyy-dizayn-cad.html">Инженерный дизайн (CAD) САПР (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/adaptivnaya-fizicheskaya-kultura.html">Инструктор по адаптивной физической культуре (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/instruktor-po-intellektualnym-vidam-sporta-r.html">Инструктор по интеллектуальным видам спорта (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/instruktor-po-okazaniyu-pervoy-meditsinskoy-pomoschi.html">Инструктор по оказанию первой помощи (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/internet-veschey-r.html">Интернет вещей (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/interernoe-ozelenenie-r.html">Интерьерное озеленение (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/informatsionnaya-bezopasnost-o.html">Информационная безопасность (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/iskusstvo-peniya-fv.html">Искусство пения (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/iskusstvo-tantsa-fv.html">Искусство танца (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ispolnitelskoe-masterstvo-vokal-1.html">Исполнительское мастерство (вокал) (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ispolnitelskoe-masterstvo-instrumentalist.html">Исполнительское мастерство (инструменталист) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ispolnitelskoe-masterstvo-teatralnoe-iskusstvo-r.html">Исполнительское мастерство (театральное искусство) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ispolnitelskoe-masterstvo-horeografiya-r.html">Исполнительское мастерство (хореография) (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-К" aria-labelledby="h-g-К">
+    <h2 class="group__letter" id="h-g-К">К</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/karving.html">Карвинг (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kartiny-sherstyu-fv.html">Картины шерстью (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kartonazhno-perepletnoe-delo-fv.html">Картонажно-переплётное дело (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kvilling-fv.html">Квиллинг (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kirpichnaya-kladka.html">Кирпичная кладка (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/klining.html">Клининг (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kovrodelie-fv.html">Ковроделие (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kovrotkachestvo-kryuchkom-r.html">Ковроткачество крючком (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kozhevennoe-zhelo-fv.html">Кожевенное дело (изготовление кожаного изделия) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kozhevennoe-delo-r.html">Кожевенное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/konditerskoe-delo.html">Кондитерское дело (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/bankovskoe-delo.html">Консультант по банковским продуктам (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kontroler-kachestva-shersti-r.html">Контролер качества шерсти (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kontroler-kipia-r.html">Контролёр КИПиА (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kopirayting-r.html">Копирайтинг (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/korrektsionnaya-pedagogika-logopediya-r.html">Коррекционная педагогика (логопедия) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialnaya-psihologiya-r.html">Коррекционная психология (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/prikladnaya-estetika.html">Косметик-эстетист (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kostoreznoe-delo-r.html">Косторезное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kofe-art-fv.html">Кофе-Арт (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kruzhevnitsa-r.html">Кружевница (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kuzovnoy-remont-r.html">Кузовной ремонт (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kulinarnoe-delo-r.html">Кулинарное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/kuhonnyy-rabochiy-r.html">Кухонный рабочий (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Л" aria-labelledby="h-g-Л">
+    <h2 class="group__letter" id="h-g-Л">Л</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/laboratornyy-himicheskiy-analiz.html">Лабораторный химический анализ (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/lazernye-tehnologii.html">Лазерные технологии (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/landshaftnyy-dizayn.html">Ландшафтный дизайн (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/lepka-buryatskih-buuz.html">Лепка бурятских бууз (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/lozopletenie.html">Лозоплетение (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-М" aria-labelledby="h-g-М">
+    <h2 class="group__letter" id="h-g-М">М</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/maketirovanie-iz-plastilina-fv.html">Макетирование из пластилина (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/maketchik-hudozhestvennyh-maketov-r.html">Макетчик художественных макетов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/makrame-r.html">Макраме (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/malyarnoe-delo.html">Малярное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/massazhist.html">Массажист (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/master-vysokoy-kuhni-r.html">Мастер высокой кухни (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/master-kukol-narodnaya-loskutnaya-kukla-fv.html">Мастер кукол (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/dekorativno-prikladnoe-iskusstvo-gorodetskaya-rospis-r.html">Мастер народно-художественных промыслов (Городецкая роспись) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/zolotnoe-shite-r.html">Мастер народно-художественных промыслов (золотное шитьё) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-axessuarov-iz-kozhi-r.html">Мастер народно-художественных промыслов (изготовление изделий из кожи) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izgotovlenie-suvenirov-iz-meha-r.html">Мастер народно-художественных промыслов (изготовление изделий из меха) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/loskutnoe-shite-r.html">Мастер народно-художественных промыслов (лоскутное шитье) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/saamskoe-rukodelie-r.html">Мастер народно-художественных промыслов (Саамское рукоделие) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/chuvashskaya-vyshivka-r.html">Мастер народно-художественных промыслов (Чувашская вышивка) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/master-pischevogo-art-dekora.html">Мастер пищевого арт-декора (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/obrabotka-texta.html">Мастер по обработке текста (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/master-po-obrabotke-tsifrovoy-informatsii-o.html">Мастер по обработке цифровой информации (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/master-po-izgotovleniyu-pitstsy.html">Мастер по приготовлению пиццы (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/mashinnoe-obuchenie-i-bolshie-dannye-r.html">Машинное обучение и большие данные (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/mebelschik.html">Мебельщик (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/meditsinskaya-optika-r.html">Медицинская оптика (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/meditsinskiy-administrator-r.html">Медицинский администратор (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/meditsinskiy-i-laboratornyy-analiz.html">Медицинский и лабораторный анализ (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/meditsinskiy-i-sotsialnyy-uhod.html">Медицинский и социальный уход (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/menedzher-po-prodazham-strahovyh-produktov-r.html">Менеджер по продажам страховых продуктов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/metrologiya-r.html">Метрология (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/mehatronika-r.html">Мехатроника (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/modelirovanie-odezhdy-metodom-nakolki.html">Модельер одежды (метод наколки) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/mozaichnik-fv.html">Мозаичник (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/valyanie-igrushki-fv-1.html">Мокрое валяние (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/molekulyarnaya-kuhnya-r.html">Молекулярная кухня (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/montazhnik-radioelektronnoy-apparatury.html">Монтажник радиоэлектронной аппаратуры (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/muzeynoe-delo.html">Музейное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/multimediynaya-zhurnalistika.html">Мультимедийная журналистика (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/multiplikatsiya-r.html">Мультипликация (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/mylovarenie-fv.html">Мыловарение (ФВ)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Н" aria-labelledby="h-g-Н">
+    <h2 class="group__letter" id="h-g-Н">Н</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/nalogovyy-konsultant.html">Налоговый консультант (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/nitkografiya-fv.html">Ниткография (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/nogtevoy-servis.html">Ногтевой сервис (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-О" aria-labelledby="h-g-О">
+    <h2 class="group__letter" id="h-g-О">О</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/oblitsovka-plitkoy.html">Облицовка плиткой (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/obsluzhivanie-aviatsionnoy-tehniki-r.html">Обслуживание авиационной техники (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/obsluzhivanie-gruzovoy-tehniki-r.html">Обслуживание грузовой техники (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/obuvnoy-servis-fv.html">Обувной сервис (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ogranka-yuvelirnyh-vstavok.html">Огранка ювелирных вставок (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ozelenitel-fv.html">Озеленитель (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/olenevodstvo-r.html">Оленеводство (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/operator-bespilotnogo-letatelnogo-apparata-r.html">Оператор беспилотного летательного аппарата (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/opilovschik-fasonnyh-otlivok-r.html">Опиловщик фасонных отливок (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-П" aria-labelledby="h-g-П">
+    <h2 class="group__letter" id="h-g-П">П</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/parikmaherskoe-iskusstvo.html">Парикмахерское искусство (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pedagog-dopolnitelnogo-obrazovaniya-r.html">Педагог дополнительного образования (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/perevodchik.html">Переводчик (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pechnoe-delo-r.html">Печное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pirografiya-fv.html">Пирография (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pletenie-iz-iskusstvennogo-rotanga-fv.html">Плетение из искусственного ротанга (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/plotnitskoe-delo-r.html">Плотницкое дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/vypechka-rasstegay-severnyy-r.html">Повар региональной кухни (выпечка расстегай Северный) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/komi-shanga-r.html">Повар региональной кухни (приготовление Коми-шаньга) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tuvinskiy-huzhuur-r.html">Повар региональной кухни (приготовление Тувинского хужуура) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/povar-regionalnoy-kuhni-prigotovlenie-uralskih-posekunchikov-r.html">Повар региональной кухни (приготовление уральских посекунчиков) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/povar-natsionalnoy-hakasskoy-kuhni-r.html">Повар региональной кухни (хакасская кухня) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/povar-sushist-r.html">Повар-сушист (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/povarskoe-delo.html">Поварское дело (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/poligraficheskoe-delo-o.html">Полиграфическое дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-klinera-fv.html">Помощник клинёра (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-ovoschevoda-fv.html">Помощник овощевода (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-povara.html">Помощник повара (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-sadovnika-fv.html">Помощник садовника (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-trenera-adaptivnoe-thekvondo-fv-1.html">Помощник тренера (Адаптивное тхеквондо) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-trenera-adaptivnoe-thekvondo-fv.html">Помощник тренера (Адаптивное тхэквондо) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-trenera-adaptivnyy-kikboxing.html">Помощник тренера (Адаптивный кикбоксинг) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-trenera-adaptivnyy-tvirling-fv.html">Помощник тренера (Адаптивный твирлинг) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pomoschnik-feldshera-malonaselennyh-punktov.html">Помощник фельдшера малонаселённых пунктов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/portnoy.html">Портной (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pohodnaya-kulinariya-r.html">Походная кулинария (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/predprinimatelstvo-r.html">Предпринимательство (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/prigotovlenie-goryachih-zakusok-fv.html">Приготовление горячих бутербродов (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/prigotovlenie-kystybyy-fv.html">Приготовление кыстыбый (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/prigotovlenie-spring-rollov-fv.html">Приготовление спринг-роллов (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/programmnye-resheniya-dlya-biznesa-r.html">Программные решения для бизнеса (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/promyshlennaya-mehanika-i-montazh-r.html">Промышленная механика и монтаж (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/promyshlennaya-robototehnika.html">Промышленная робототехника (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pryanichnoe-delo-r.html">Пряничное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/psihologiya.html">Психология (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pchelovodstvo-r.html">Пчеловодство (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Р" aria-labelledby="h-g-Р">
+    <h2 class="group__letter" id="h-g-Р">Р</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/rabotnik-zelenogo-hozyaystva-r.html">Работник зеленого хозяйства (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/rabochiy-lesnogo-hozyaystva-r.html">Рабочий лесного хозяйства (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-razrabotke-i-sborke-bpla-r.html">Разработка и сборка БПЛА (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/razrabotka-kompyuternyh-igr-r.html">Разработка компьютерных игр (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/razrabotka-mobilnyh-prilozheniy-r.html">Разработка мобильных приложений (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/razrabotchik-virtualnoy-i-dopolnennoy-realnosti.html">Разработчик виртуальной и дополненной реальности (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/reversivnyy-inzhiniring-r.html">Реверсивный инжиниринг (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/rezba-po-derevu.html">Резьба по дереву (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/releynaya-zaschita-i-avtomatizatsiya-elektro-energeticheskih-sistem-r.html">Релейная защита и автоматизация электро-энергетических систем (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/remeslennaya-keramika-fv.html">Ремесленная керамика (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/remont-i-obsluzhivanie-avtomobiley.html">Ремонт и обслуживание автомобилей (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/remont-obuvi.html">Ремонт обуви (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/restorannyy-servis.html">Ресторанный сервис (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/risovanie-kartin-guashyu-fv.html">Рисование картин гуашью (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/risovanie-kartin-plastilinom-fv.html">Рисование картин пластилином (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/risovanie-kartin-pugovitsami-fv.html">Рисование картин пуговицами (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/roboart-robotizirovannoe-iskusstvo-r.html">Робоарт (Роботизированное искусство) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/robototehnika-lego-fv.html">Робототехника (Лего) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/robototehnika.html">Робототехника (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/rospis-po-shelku.html">Роспись по шелку (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ruchnaya-vyshivka-fv.html">Ручная вышивка (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ruchnaya-lepka-iz-gliny-fv.html">Ручная лепка из глины (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/ruchnaya-rabota-po-derevu-fv.html">Ручная работа по дереву (ФВ)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-С" aria-labelledby="h-g-С">
+    <h2 class="group__letter" id="h-g-С">С</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/sadovnik-r.html">Садовник (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sborka-avtomobilnyh-zhgutov.html">Сборка автомобильных жгутов</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sborka-razborka-elektronnogo-oborudovaniya.html">Сборка – разборка электронного оборудования (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/svarochnye-tehnologii.html">Сварочные технологии (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/semenovod-r.html">Семеновод (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/servis-na-vozdushnom-transporte-r.html">Сервис на воздушном транспорте (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/setevoe-i-sistemnoe-administrirovanie.html">Сетевое и системное администрирование (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/siti-fermerstvo-r.html">Сити-фермерство (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/slesarnoe-delo.html">Слесарное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/slesar-sanitarno-tehnicheskih-sistem-r.html">Слесарь санитарно-технических систем (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/smetnoe-delo-r.html">Сметное дело (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sovremennaya-tehnika-dekorirovaniya-papertol-fv.html">Современная техника декорирования (папертоль) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sozdanie-izdeliy-iz-bisera-izgotovlenie-ukrasheniy-fv.html">Создание изделий из бисера (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sozdanie-tsvetochnyh-kompozitsiy-fv.html">Создание цветочных композиций (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sortirovschik-polimernogo-vtorsyrya-fv.html">Сортировщик полимерного вторсырья (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sotsialnaya-rabota-r.html">Социальная работа (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-kompyuternoy-grafiki-moushn-dizayner-r.html">Специалист компьютерной графики (моушн-дизайнер) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-organizatsii-proizvodstva-berezhlivoe-proizvodstvo-r.html">Специалист по организации производства (Бережливое производство) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-ohrane-truda-r.html">Специалист по охране труда (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-podboru-personala-rekruter-r.html">Специалист по подбору персонала (рекрутер) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-reklame-r.html">Специалист по рекламе (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-sotsialnoy-reabilitatsii-r.html">Специалист по социальной реабилитации (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-surdokommunikatsii-r.html">Специалист по сурдокоммуникации (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-tipovym-resheniyam-1s.html">Специалист по типовым решениям 1С (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-upravleniyu-personalom-r.html">Специалист по управлению персоналом (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-finansam-obschestvennogo-sektora-r.html">Специалист по финансам общественного сектора (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/spetsialist-po-ekologicheskoy-bezopasnosti-r.html">Специалист по экологической безопасности (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/pochtovaya-svyaz.html">Специалист почтовой связи (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/stolyarnoe-delo.html">Столярное дело (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/stop-moushn-fv.html">Стоп-моушн (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/sudya-po-adaptivnomu-thekvondo.html">Судья по адаптивному тхеквондо (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/suhoe-stroitelstvo-i-shtukaturnye-raboty.html">Сухое строительство и штукатурные работы (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/stsenicheskoe-masterstvo-r.html">Сценическое мастерство (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/syrovarenie-r.html">Сыроварение (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Т" aria-labelledby="h-g-Т">
+    <h2 class="group__letter" id="h-g-Т">Т</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/teatr-malyh-form-fv.html">Театр малых форм (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/testirovanie-programmnogo-obespecheniya-r.html">Тестирование программного обеспечения (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tehnik-protezist-r.html">Техник-протезист (Р, О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tehnologii-informatsionnogo-modelirovaniya-bim-r.html">Технологии информационного моделирования &amp;quot;BIM&amp;quot; (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tipografskoe-delo-fv.html">Типографское дело (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tkach-fv.html">Ткач (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tokarnye-raboty-na-stankah-s-chpu.html">Токарные работы на станках с ЧПУ (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/torgovoe-delo-o.html">Торговое дело (Р,О)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-У" aria-labelledby="h-g-У">
+    <h2 class="group__letter" id="h-g-У">У</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/upravlenie-skladirovaniem-r.html">Управление складированием (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/uchitel-nachalnyh-klassov.html">Учитель начальных классов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/uchitel-predmetnik-angliyskiy-yazyk-r.html">Учитель-предметник (английский язык) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/uchitel-predmetnik-r.html">Учитель-предметник (биология) (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Ф" aria-labelledby="h-g-Ф">
+    <h2 class="group__letter" id="h-g-Ф">Ф</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/farmatsiya-r.html">Фармация (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/farforist-r.html">Фарфорист (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/feldsher-r.html">Фельдшер (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/finansovyy-konsultant-r.html">Финансовый консультант (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/floristika-o.html">Флористика  (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/fotograf-o.html">Фотограф (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/frezernye-raboty-na-stankah-s-chpu-r.html">Фрезерные работы на станках с ЧПУ (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/fud-floristika-r.html">Фуд-флористика (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Х" aria-labelledby="h-g-Х">
+    <h2 class="group__letter" id="h-g-Х">Х</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhestvennaya-obrabotka-dereva-r.html">Художественная обработка дерева (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/fyuzing.html">Художественная обработка стекла (Фьюзинг) (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhestvennaya-rospis.html">Художественная роспись (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhestvennaya-rospis-po-derevu-fv.html">Художественная роспись по дереву (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhestvennoe-vyshivanie-r.html">Художественное вышивание (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhestvennoe-slovo-fv.html">Художественное слово (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhestvennoe-tvorchestvo-dekupazh.html">Художественное творчество (Декупаж) (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhestvennyy-dizayn-r.html">Художественный дизайн (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/hudozhnik-po-grimu-r.html">Художник по гриму (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/izobrazitelnoe-iskusstvo.html">Художник-оформитель (Р,О)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Ц" aria-labelledby="h-g-Ц">
+    <h2 class="group__letter" id="h-g-Ц">Ц</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/tsifrovaya-metrologiya-r.html">Цифровая метрология (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tsifrovaya-transformatsiya-biznesa-r.html">Цифровая трансформация бизнеса (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tsifrovizatsiya-apk.html">Цифровизация АПК</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/tsifrovoy-kurator.html">Цифровой куратор (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Ш" aria-labelledby="h-g-Ш">
+    <h2 class="group__letter" id="h-g-Ш">Ш</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/shveynoe-delo-fv.html">Швейное дело (ФВ)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/shveya-o.html">Швея (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/shelonskaya-vyazka.html">Шелонская вязка (ФВ)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Э" aria-labelledby="h-g-Э">
+    <h2 class="group__letter" id="h-g-Э">Э</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/ekonomika-i-buhgalterskiy-uchet.html">Экономика и бухгалтерский учет (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/expedirovanie-gruzov-r.html">Экспедирование грузов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/expert-po-kachestvu-r.html">Эксперт по качеству (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/expluatatsiya-bas-r.html">Эксплуатация БАС (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/expluatatsiya-selskohozyaystvennyh-mashin-r.html">Эксплуатация сельскохозяйственных машин (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/expluatatsiya-servisnyh-robotov.html">Эксплуатация сервисных роботов (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/elektromontazh.html">Электромонтаж (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/elektronika.html">Электроника (Р)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/elektroprivod-i-avtomatika-o.html">Электропривод и автоматика (Р)</a></li>
+    </ul>
+  </section>
+  <section class="group" id="g-Ю" aria-labelledby="h-g-Ю">
+    <h2 class="group__letter" id="h-g-Ю">Ю</h2>
+    <ul class="comp-list">
+      <li class="comp"><a class="comp__link" href="kompetentsii/yuvelirnoe-delo.html">Ювелирное дело (Р,О)</a></li>
+      <li class="comp"><a class="comp__link" href="kompetentsii/yurisprudentsiya-r.html">Юриспруденция (Р)</a></li>
+    </ul>
+  </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <span>© 2026 Региональный центр Абилимпикс республики Башкортостан</span>
+  <span>Республика Башкортостан, г. Салават</span>
+  <a href="https://abilympics-russia.ru/competencies/Komp2026/" target="_blank" rel="noopener">Официальный перечень на abilympics-russia.ru</a>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Наверх">
+  <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="2"/></svg>
+</button>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var clear = document.getElementById('clear');
+  var found = document.getElementById('found');
+  var empty = document.getElementById('empty');
+  var reset = document.getElementById('reset');
+  var list = document.getElementById('list');
+  var groups = Array.prototype.slice.call(list.querySelectorAll('.group'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+
+  groups.forEach(function(g){
+    g.__links = Array.prototype.slice.call(g.querySelectorAll('.comp__link'));
+    g.__text = g.__links.map(function(a){ return a.textContent.toLowerCase(); });
+    g.__chip = chips.filter(function(c){ return c.getAttribute('href') === '#' + g.id; })[0] || null;
+  });
+  var total = groups.reduce(function(s, g){ return s + g.__links.length; }, 0);
+
+  function norm(s){
+    return s.toLowerCase().replace(/ё/g, 'е').replace(/\s+/g, ' ').trim();
+  }
+
+  function apply(){
+    var term = norm(q.value);
+    var shown = 0;
+    groups.forEach(function(g){
+      var n = 0;
+      g.__links.forEach(function(a, i){
+        var hit = !term || g.__text[i].indexOf(term) !== -1;
+        a.parentNode.hidden = !hit;
+        if (hit) n++;
+      });
+      g.hidden = n === 0;
+      if (g.__chip) g.__chip.classList.toggle('is-empty', n === 0);
+      shown += n;
+    });
+    found.textContent = term ? (shown + ' из ' + total) : (total + ' из ' + total);
+    empty.classList.toggle('is-on', shown === 0);
+    clear.classList.toggle('is-on', q.value.length > 0);
+  }
+
+  var t = null;
+  q.addEventListener('input', function(){
+    clearTimeout(t);
+    t = setTimeout(apply, 90);
+  });
+  clear.addEventListener('click', function(){ q.value = ''; apply(); q.focus(); });
+  reset.addEventListener('click', function(){ q.value = ''; apply(); q.focus(); });
+  q.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ q.value = ''; apply(); }
+  });
+  apply();
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    toTop.classList.toggle('is-on', window.scrollY > 700);
+  }, { passive: true });
+  toTop.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
