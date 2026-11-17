@@ -179,7 +179,15 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", ctype)
         self.send_header("Last-Modified", last_mod)
         self.send_header("ETag", etag)
-        self.send_header("Cache-Control", "public, max-age=3600")
+        # HTML перепроверяется при каждом заходе (304 по ETag почти бесплатен),
+        # иначе правки не доезжают до посетителя до истечения max-age.
+        # Картинки, шрифты и PDF кэшируются надолго.
+        if ctype.startswith("text/html"):
+            self.send_header("Cache-Control", "no-cache, must-revalidate")
+        elif ctype.startswith(("image/", "font/", "application/pdf")):
+            self.send_header("Cache-Control", "public, max-age=86400")
+        else:
+            self.send_header("Cache-Control", "public, max-age=3600")
         self.send_header("Accept-Ranges", "bytes")
         self.send_header("X-Content-Type-Options", "nosniff")
         if partial:
